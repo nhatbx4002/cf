@@ -1,0 +1,20 @@
+#include<bits/stdc++.h>
+ 
+using namespace std ;
+ 
+int n ; 
+ 
+int main(){
+	cin >> n;
+	int dem = 0 ;
+	for(int i = 1 ; i <= n ; i++){
+		int cnt = 0 ; 
+		for(int j = 1 ; j <= 3 ; j++){
+			int x ; cin >> x ;
+			if(x == 1) cnt++;
+		}
+//		cout << cnt << endl;
+		if(cnt >= 2) dem++;
+	}
+	cout << dem << endl;
+}
