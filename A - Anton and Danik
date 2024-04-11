@@ -1,0 +1,17 @@
+#include<bits/stdc++.h>
+ 
+using namespace std; 
+ 
+int n ;
+string s ; 
+int cnt[256];
+int main(){
+	cin >> n >> s ;
+	for(int i = 0 ; i < n ; i++){
+		if(s[i] == 'A') cnt['A']++;
+		else cnt['D']++;
+	}
+	if(cnt['A'] > cnt['D']) cout << "Anton"<< endl;
+	else if (cnt['A'] < cnt['D']) cout <<"Danik" << endl;
+	else cout <<"Friendship"<<endl;
+}
