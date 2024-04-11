@@ -1,0 +1,31 @@
+#include<bits/stdc++.h>
+ 
+using namespace std;
+ 
+int main(){
+	int t ; cin >> t ; 
+	while(t--){
+		int n ; cin >> n ;
+		int sum = 0 ;
+		int b[n];
+		for(int i = 0 ; i < n ; i++){
+			int x ; cin >> x ;
+			sum += x ;
+			b[i] = x % 3;
+		}
+		int tmp = sum % 3 ;
+		if(tmp == 0) cout << tmp << endl;
+		else if(tmp == 2) cout << "1" <<endl;
+		else {
+			int ok = 0; 
+			for(int i = 0 ; i < n ; i++){
+				if(b[i] == 1){
+					ok = 1; 
+					break; 
+				}
+			}
+			if(ok == 1) cout <<"1"<<endl;
+			else cout << "2" << endl;
+		} 
+	}
+}
