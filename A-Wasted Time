@@ -1,0 +1,18 @@
+#include<bits/stdc++.h>
+
+using namespace std;
+
+int main(){
+    int n , k ; cin >> n >> k ; 
+    double x0,y0,x,y,total(0.0);
+    cin >> x0 >> y0;
+    while(--n){
+        cin >> x >> y ; 
+        total += sqrt((x-x0)*(x-x0) + (y-y0)*(y-y0));
+        x0 = x ; 
+        y0 = y ;
+    }
+
+    cout << fixed << setprecision(6) << total * k / 50 ;
+    return 0 ;
+}
